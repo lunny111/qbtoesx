@@ -2,11 +2,12 @@ QBUS to ESX by Lunny#7190 - RY#2932 - Baris#6357 - adişş#5555
 ------------------------------------------------------------
 QBCore = nil 
 
-local PlayerData = {}
 Citizen.CreateThread(function()
-    while PantCore == nil do 
-        TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
-    end
+	while QBCore == nil do
+		TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
+		Citizen.Wait(31)
+	end
+end)
 
 
 ESX = nil

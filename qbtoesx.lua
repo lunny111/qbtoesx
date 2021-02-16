@@ -23,14 +23,16 @@ Citizen.CreateThread(function()
 end)
 -----------------------------------------------------------
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
-AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-  PlayerData.job = job
-end)
+AddEventHandler('QBCore:Client:OnPlayerLoaded', 
+    
+  RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded',   
+--------------------------------------------------------------------
+RegisterNetEvent('QBCore:Client:OnJobUptade')
+AddEventHandler('QBCore:Client:OnJobUptade', 
 
 RegisterNetEvent('esx:setJob')
-AddEventHandler('esx:setJob', function()
-  PlayerData.job = job
-end)
+AddEventHandler('esx:setJob',
 ---------------------------------------------------------------------
 QBCore.Functions.DrawText3D(1, 1, 1, 'Örnek')
 
